@@ -38,7 +38,7 @@ const Home = () => {
         </div>
 
         <ul>
-          {shopping.length === 0 ? ( // mensaje si no hay tareas
+          {shopping.length === 0 ? ( // si no hay tareas
             <li>There's nothing in the shopping list, add items</li>
           ) : (
             shopping.map((item) => (
@@ -47,10 +47,7 @@ const Home = () => {
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: "5px 0",
-                  borderBottom: "1px solid #ddd",
-                }}
+                  alignItems: "center"}}
                 onMouseEnter={() => setHoveredTask(item.id)} // Muestra el ícono al pasar el ratón
                 onMouseLeave={() => setHoveredTask(null)} // Oculta el ícono al salir
               >
